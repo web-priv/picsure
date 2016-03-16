@@ -1,0 +1,30 @@
+<div data-media-id={{_id}} data-album-id={{albumid}}>
+{{#if isPhoto}}
+      <div class="media-photo" data-media-id={{_id}} style="float: left;">
+	<div class="photo-parea" data-media-id={{_id}}>
+          <img data-media-id={{_id}} class="img-rounded media-photo-thumb" width=198 height=198 src={{imgsrc}}></img>
+        </div>
+      {{#if isEditing}}
+        <form class="form-inline media-description-form">
+          <div class="form-group media-description-parent">
+            <input type="text" class="form-control" placeholder="enter description">
+          </div>
+          <button type="button" class="btn btn-default media-save-field">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default media-cancel-edit">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </form>
+     {{else}}
+        <span class="media-description-parent">
+	  <span class="media-photo-description" data-empty-message="no description"></span>
+   	</span>
+	<a class="media-enable-edit glyphicon glyphicon-edit" aria-hidden="true" href></a>
+     {{/if}}
+	<a class="media-delete" data-media-id={{_id}} href>
+	  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	</a>
+      </div>
+{{/if}}
+</div>

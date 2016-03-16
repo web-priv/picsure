@@ -1,0 +1,7 @@
+<div class="invite" data-invite-id={{_id}}>
+     {{#if isAccepted}}
+     From: <span class="user-name">{{from}}</span> Date: {{createdOn}} <a class="album-details-goto" data-album-id={{albumid}} href="#/album/{{albumid}}">Access collection</a>
+     {{else}}
+     From: <span class="user-name">{{from}}</span> Date: {{createdOn}} <button class="accept-invite">Accept Invite</button> <button class="reject-invite">Reject Invite</button>
+     {{/if}}
+</div>

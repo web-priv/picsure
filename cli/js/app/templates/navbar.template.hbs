@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">
+      <img alt="Picsure" height=20 width=20 src="images/icon48.png">
+    </a>
+  </div>
+  
+    <!-- nav links forms and other content -->
+    <div class="collapse navbar-collapse" id="navbar-stuff">
+      <ul class="nav navbar-nav navbar-right">
+	{{#if showSignin}}
+	<li>
+	  {{#if signingIn}}
+	    <form class="navbar-form navbar-left" id="signin-form" role="signin">
+	      <div class="form-group">
+		<label class="help-inline control-label error-label"></label>
+	        <input type="text" name="username" class="form-control" placeholder="Username">
+	      </div>
+	      <button type="submit" class="btn btn-default">Sign In</button>
+	      <button id="cancel-signin" class="btn btn-default">Cancel</button>
+	    </form>
+	  {{else}}
+  	    <button type="button" id="start-signin" class="btn btn-default navbar-btn">Sign in</button>
+	    <p class="navbar-text">You are signed out.</p>
+	  {{/if}}
+	</li>
+	{{else}}
+	<li>
+	  <button type="button" id="signout" class="btn btn-default navbar-btn">Logout</button>	
+	  <p class="navbar-text">Logged in as <b>{{username}}</b></p>
+	</li>
+	{{/if}}
+      </ul>
+  </div>
+</div>

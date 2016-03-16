@@ -1,0 +1,40 @@
+<div class="album-toolbar highlight">
+  <form class="form-inline album-toolbar-form">
+    <button type="button" class="btn" id="add-media-button">Add Photo</button>
+    <div class="form-group">
+      <label style="margin-left: 20px;" for="add-friend-select">Invite:</label>
+      <select id="add-friend-select" class="form-control" placeholder="loading..."></select>
+      <button type="button" class="btn" id="add-friend-button">OK</button>
+    </div>
+  </form>
+</div>
+
+<div data-album-id={{_id}} class="album-details-header">
+
+  <div class="album-details-side">
+    <h4 class="album-details-owner">collection by: @{{userid}}</h4>
+    <h4 class="album-details-viewers">viewers: {{viewers}}</h4>
+  </div>
+
+  {{#if isEditing}}
+    <form class="form-inline album-description-form">
+       <div class="form-group">
+         <input type="text" class="form-control" placeholder="enter description">
+       </div>
+       <button type="button" class="btn btn-default album-save-field">
+         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+       </button>
+       <button type="button" class="btn btn-default album-cancel-edit">
+         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+       </button>
+    </form>
+  {{else}}
+    <h2 class="album-details-description">{{desc}}</h2>
+    <a href class="album-enable-edit glyphicon glyphicon-edit" aria-hidden="true"></a>
+  {{/if}}
+
+</div>
+
+<div class="clearfix"></div>
+
+<ul id="media-list" class="media-container" data-empty-message="There is no media in this collection yet."></ul>

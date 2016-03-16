@@ -1,0 +1,82 @@
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+/* @body-bg: red; */
+
+ul:empty::after {
+	content: attr(data-empty-message);
+}
+
+#media-list {
+	margin-top: 10px;
+}
+
+.highlight {
+  padding: 9px 14px;
+  margin-bottom: 14px;
+  background-color: #fefef9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+
+.media-photo {
+
+  .media-enable-edit, .media-delete {
+    float: left;
+    margin: 10px;
+  }
+
+  .media-enable-edit, .media-delete {
+    display: none;
+  }
+
+  &:hover {
+    .media-enable-edit, .media-delete {
+       display: initial;
+    }
+  }
+
+}
+
+.album-details-header {
+
+  form.album-description-form {
+     margin: 12px;
+  }
+
+  .album-enable-edit {
+     font-size: 1.2em;
+     display: none;
+  }
+
+  &:hover {
+     .album-enable-edit {
+        display: initial;
+     }
+  }
+
+  .album-details-side {
+    float: right;
+    margin-top: 0px;
+    color: #BCBCBC;
+
+    /* "this album is owned by {{userid}} */
+    .album-details-owner {
+    }
+  }
+
+  .album-details-description {
+     display: inline-block;
+     margin-top: 0px;
+  }
+}
+
+div.media-photo {
+   margin: 2px;
+}
+
+.media-photo span, .media-photo img {
+	     display: block;
+}
+
+span.media-photo-description:empty::after {
+	content: attr(data-empty-message);
+}
