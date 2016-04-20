@@ -19,7 +19,7 @@ Installation
 
 1. Download the source code:
 
-    `$ git clone https://github.com/web-priv/picsure.git && cd KiwiIRC`
+    `$ git clone https://github.com/web-priv/picsure.git && cd picsure`
 
 2. Install the dependencies:
 
